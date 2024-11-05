@@ -1,11 +1,6 @@
 CHANGELOG
 =========
 
-7.3
----
-
- * Make `ChainUserProvider::loadUserByIdentifier()` to pass all arguments to its nodes, not only `$identifier`
-
 7.2
 ---
 
@@ -13,6 +8,7 @@ CHANGELOG
  * Add `$token` argument to `UserCheckerInterface::checkPostAuth()`
  * Deprecate argument `$secret` of `RememberMeToken`
  * Deprecate returning an empty string in `UserInterface::getUserIdentifier()`
+ * Make `ChainUserProvider::loadUserByIdentifier()` to pass all arguments to its nodes, not only `$identifier`
 
 7.0
 ---
