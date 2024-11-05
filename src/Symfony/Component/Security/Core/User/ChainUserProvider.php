@@ -50,7 +50,7 @@ class ChainUserProvider implements UserProviderInterface, PasswordUpgraderInterf
     {
         foreach ($this->providers as $provider) {
             try {
-                return $provider->loadUserByIdentifier($identifier);
+                return $provider->loadUserByIdentifier(...func_get_args());
             } catch (UserNotFoundException) {
                 // try next one
             }

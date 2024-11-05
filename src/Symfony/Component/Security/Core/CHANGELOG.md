@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+7.3
+---
+
+ * Make `ChainUserProvider::loadUserByIdentifier()` to pass all arguments to its nodes, not only `$identifier`
+
 7.2
 ---
 
