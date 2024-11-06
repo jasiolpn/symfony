@@ -77,7 +77,7 @@ class ChainUserProviderTest extends TestCase
         $provider1
             ->expects($this->once())
             ->method('loadUserByIdentifier')
-            ->with($this->equalTo('foo'))
+            ->with('foo')
             ->willThrowException(new UserNotFoundException('not found'))
         ;
 
@@ -85,7 +85,7 @@ class ChainUserProviderTest extends TestCase
         $provider2
             ->expects($this->once())
             ->method('loadUserByIdentifier')
-            ->with($this->equalTo('foo'), $this->equalTo(['bar' => 'baz']))
+            ->with('foo', ['bar' => 'baz'])
             ->willReturn($account = $this->createMock(UserInterface::class))
         ;
 
